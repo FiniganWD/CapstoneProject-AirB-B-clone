@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { BodySectionComponent } from './components/body-section/body-section.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    BodySectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
