@@ -53,33 +53,14 @@
 <div id="blog" class="container blog-box">
   <h2 class="text-center mb-5">In questa sezione trovi dei consigli su dove trascorrere la tua prossima vacanza</h2>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 mb-5" *ngFor="let blog of blogs">
       <div class="card w-100" style="width: 18rem;">
-        <img src="../../../assets/img/body-banner.jpg" class="card-img-top" alt="...">
+        <img src="{{blog.img}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card w-100" style="width: 18rem;">
-        <img src="../../../assets/img/body-banner.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card w-100" style="width: 18rem;">
-        <img src="../../../assets/img/body-banner.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h3 class="card-title mb-1 fw-bold">{{ blog.title | uppercase }}</h3>
+          <p class="card-text">{{ blog.extract }}</p>
+          <h5 class="text-muted">AUTORE: {{ blog.author }}</h5>
+          <a href="#" class="">Leggi tutto</a>
         </div>
       </div>
     </div>
